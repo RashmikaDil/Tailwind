@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TailWind - Login Form</title>
+</head>
+<body class="bg-black flex justify-center items-center h-[100vb] text-[12px] ">
+
+    <div class="w-[300px] h-auto bg-white rounded-md text-center font-bold px-4 pb-8 ">
+        
+        <h1 class="m-4 mt-4 mb-10 text-3xl ">Login</h1>
+
+        <form action="#">
+            <input type="text" placeholder="Username" class="w-full mb-4 border-2 text-sm  border-2 border-solid border-black p-1 py-2">
+           
+           <div class="flex justify-center ">
+            <input type="password" id="pass" placeholder="Password" class="w-[100%] mb-4 border-2 text-sm  border-2 border-solid border-black p-1 py-2">
+            <div class="ml-2  w-[40px]  p-2 cursor-pointer h-[40px] flex justify-center items-center border-2 border-black " >
+                <i class="fa-solid fa-eye-slash" id="showpass" onclick="test();"></i>
+            </div>
+        </div>
+            <div class="w-full text-right p-2 "> 
+                      <a href="#">Forgot Password</a>
+                </div>
+            <button type="submit" class=" mb-4 text-sm bg-black text-white p-4 w-full hover:bg-white hover:text-black hover:border-2 hover:border-black border-2 transition border-black">Login</button>
+          
+          <a href="#" class="mb-4">Create a account !</a>
+        
+        
+        
+        </form>
+
+    </div>
+    <script>
+       let a = document.getElementById("pass")
+       let b = document.getElementById("showpass")
+      function test(){
+       if(a.type=="password"){
+        a.type = "text";
+
+        b.classList.remove("fa-eye-slash");
+        b.classList.add("fa-eye");
+       }
+       else
+       {
+        a.type = "password";
+        b.classList.remove("fa-eye");
+        b.classList.add("fa-eye-slash");
+       }
+
+    }
+    </script>
+</body>
+</html>
